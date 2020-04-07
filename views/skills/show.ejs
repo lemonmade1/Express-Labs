@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skills</title>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='public/stylesheets/fontawesome' />
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="centered">
+
+    <h1>DEV Skills:</h1>
+    <h3 id="skillId"><%= skill.skill %></h3>
+    <h3 id="complete">Complete: <%= skill.done ? 'Yes' : 'No' %></h3>
+    <a href="/skills/<%= skillNum - 1 %>/edit">
+      <i class="fa fa-edit"></i> Edit DEV Skill
+    </a>
+
+  </body>
+</html>

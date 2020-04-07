@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express To-Do</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="centered">
+
+    <h1>Edit DEV Skills</h1>
+
+    <form id="editForm" action="/skills/<%= idx %>?_method=PUT" method="POST" autocomplete="on">
+      <input class="editClass" name="skill" type="text" value="<%= skill.skill %>">
+      <input name="done" type="checkbox"  <%= skill.done ? 'checked' : '' %> />
+      <button class="editClass" type="submit">Update DEV Skills</button>
+    </form>
+
+  </body>
+</html>

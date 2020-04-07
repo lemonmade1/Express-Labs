@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Express To-Do</title>
+
+  <!-- CSS -->
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <!-- JAVASCRIPT -->
+  <script defer src="js/jquery-3.4.1.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="centered">
+
+  <h1>DEV Skills</h1>
+
+  <ul>
+    <% skills.forEach(function(t, idx) { %>
+    <li>
+      <div class="centered-row">
+        <div>
+          <form action="/skills/<%= idx %>?_method=DELETE" class="delete-form" method="POST">
+            <button type="submit">X</button>
+          </form>
+        </div>
+        <div>
+          <a href='/skills/<%= idx %>'><%= t.skill %></a>
+        </div>
+        <div>
+          <%= t.done ? 'complete' : 'not done' %>
+        </div>
+
+      </div>
+
+      <a href='skills/<%= idx %>/edit'> Edit Skill </a>
+    </li>
+    <% }); %>
+  </ul>
+
+  <a id="addSkill" class="centered" href="/skills/new"> Add DEV Skill </a>
+
+</body>
+
+</html>
